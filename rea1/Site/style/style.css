@@ -19,6 +19,7 @@ body{
   background-image: url("./../images/test.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
  
 }
 
@@ -397,6 +398,7 @@ footer{
     font-family: 'Roman SD';
     padding:0;
     margin:0;
+    font-size:10px;
   }
 
   h1{
