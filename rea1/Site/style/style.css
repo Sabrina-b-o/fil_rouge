@@ -1,11 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 
-/* Intégration des polices */
 @font-face {
   font-family: "Dalek Pinpoint";
   src: url("./DalekPinpointBold.ttf") format("ttf");
@@ -19,6 +12,7 @@
 
 
 body{
+
   font-family: 'Roman SD';
   font-weight: bold;
   font-size:15px;
@@ -26,6 +20,10 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
  
+}
+
+section{
+  position:relative;
 }
 
 /* Titre principal */
@@ -45,47 +43,36 @@ h1{
 }
 
 /* Barre de navigation */
-.nav {
-  
-    -webkit-box-align: center;
-  
-        -ms-flex-align: center;
-  
-            align-items: center;
-    font-weight: 300;
-    height: 70vh;
-  }
-
 
 .nav {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-perspective: 10px;
-            perspective: 10px;
-    -webkit-transform: perspective(300px) rotateX(20deg);
-            transform: perspective(300px) rotateX(20deg);
+    -webkit-perspective: 120px;
     will-change: perspective;
-    -webkit-perspective-origin: center center;
-            perspective-origin: center center;
     -webkit-transition: all 1.3s ease-out;
     -o-transition: all 1.3s ease-out;
     transition: all 1.3s ease-out;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 300;
+    height: 70vh;
+    position:relative;
   }
   
 .nav:hover {
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    -webkit-perspective: 700px;
+    perspective: 700px;
     -webkit-transition: all 1.3s ease-in;
     -o-transition: all 1.3s ease-in;
     transition: all 1.3s ease-in;
     -webkit-transform: perspective(10000px) rotateX(0deg);
-            transform: perspective(10000px) rotateX(0deg);
+    transform: perspective(10000px) rotateX(0deg);
 }
 
 
@@ -96,13 +83,13 @@ h1{
 .nav > div {
       opacity: 1;
       -webkit-transition-delay: 0s;
-           -o-transition-delay: 0s;
-              transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
     }
 
   
   .left, .center, .right, .lefter, .righter {
-    width: 230px;
+    width: 15%;
     height: 260px;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -128,8 +115,8 @@ h1{
   
 .text  {
     -webkit-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-            transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
     opacity: 0;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
@@ -142,6 +129,7 @@ h1{
     margin-left:10%;
     margin-right:10%;
     margin-top:100%;
+    position:fixed;
 
   }
 
@@ -151,13 +139,13 @@ h1{
 
   .lefter {
     -webkit-transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
-            transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
     background-image: url("./../images/des.png");
 
   }
   .left {
     -webkit-transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-            transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
     background-image: url("./../images/fleche.png");
   }
   .center {
@@ -166,12 +154,12 @@ h1{
   }
   .right {
     -webkit-transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-            transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
     background-image: url("./../images/contact.png");
   }
   .righter {
     -webkit-transform: translateX(60px) translateZ(-50px) rotateY(10deg);
-            transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
     background-image: url("./../images/avis.png");
   }
 
@@ -179,8 +167,7 @@ h1{
 #rules, #download, #contact, #avis {
 
   -webkit-box-shadow: inset 0 0 1em gold, 0 0 2em red;
-
-          box-shadow: inset 0 0 1em gold, 0 0 2em red;
+  box-shadow: inset 0 0 1em gold, 0 0 2em red;
   border-radius: 15px;
   margin:5% 10% 0 10%;
   
@@ -212,8 +199,8 @@ h1{
   display:flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin: 5% 40% 5% 40%;
 }
 
@@ -258,14 +245,14 @@ h1{
   display:flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+   flex-direction: column;
 }
 
 #contact img{
   width:30%;
   text-align:center;
-  margin-left:40%;
+  margin-left:35%;
   margin-bottom:2%;
 }
   
@@ -275,13 +262,13 @@ h1{
   
   label {
     display: inline-block;
-    width: 90px;
+    width:15%;
     text-align: right;
   }
   
   input, textarea {
     font: 1em sans-serif;
-    width: 60%;
+    width: 70%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
    border: 1px solid #999;
@@ -295,11 +282,6 @@ h1{
 
     vertical-align: top;
     height: 5em;
-  }
-  
-  .button {
- 
-    padding-left: 90px; 
   }
   
   /* Design du bouton de formulaire */
@@ -393,6 +375,8 @@ h1{
   grid-row:2;
 }
 
+
+
 footer{
     background-color:black;
     height: 5%;
@@ -409,14 +393,35 @@ footer{
 
   { 
   body{
-    width:100%;
+    width:auto;
+    font-family: 'Roman SD';
+    padding:0;
     margin:0;
+  }
+
+  h1{
+    font-size:50px;
+    text-align:center;
   }
 
   .container{
     width:100%;
   }
-  
-  
+  .nav {
+    display:none;
+  }
+
+section{
+  width:100%;
+  margin:4%;
+}
+#download > img {
+  width:40%;
+}
+.container{
+  width:100%;
+  margin:auto;
+  padding:auto;
+}
   }
   
