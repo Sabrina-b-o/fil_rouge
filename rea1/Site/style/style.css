@@ -222,6 +222,10 @@ h1{
 
 }
 
+#rules img:nth-child(2){
+  width:10%;
+}
+
 
 /* Formulaire */
 
