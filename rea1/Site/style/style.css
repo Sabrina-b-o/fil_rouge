@@ -1,17 +1,27 @@
+/* Intégration des polices */
 @font-face {
   font-family: "Dalek Pinpoint";
-  src: url("./../style/DalekPinpointBold.ttf") format("ttf"),
+  src: url("./DalekPinpointBold.ttf") format("ttf");
 
  }
+ 
+@font-face {
+  font-family: "Roman SD";
+  src: url("./RomanSD.ttf");
+}
+
 
 body{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roman SD';
+  font-weight: bold;
+  font-size:15px;
   background-image: url("./../images/test.jpg");
   background-size: cover;
   background-repeat: no-repeat;
  
 }
 
+/* Titre principal */
 h1{
   font-family: 'Dalek Pinpoint' ;
   font-size: 100px;
@@ -21,44 +31,19 @@ h1{
   margin-top:5%;
   margin-bottom:0;
 }
-.nav {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 300;
-    height: 85vh;
-  }
 
-#rules, #download, #contact, #avis {
-  border:1px solid black;
-  border-radius: 15px;
-  margin:5% 10% 0 10%;
-  
-}
-
-.container > section {
-  background: linear-gradient(rgb(226, 56, 56), rgb(247, 244, 84));
-}
-
-.container h2{
-  text-align:center;
-  background-image: url("./../images/bois.jpg");
-  border-radius: 15px;
-  padding:0;
-  margin:0;
+/* Changement de couleur au survol des liens */
+.text:hover{
   color:white;
 }
 
-.container > section > p {
-  text-align:center;
-}
-
-#rules > img{
-  width:20%;
-  margin:auto;
-  display:flex;
-}
+/* Barre de navigation */
+.nav {
+  
+    align-items: center;
+    font-weight: 300;
+    height: 70vh;
+  }
 
 
 .nav {
@@ -149,10 +134,64 @@ h1{
     background-image: url("./../images/avis.png");
   }
 
+/* différents containers */
+#rules, #download, #contact, #avis {
+
+  box-shadow: inset 0 0 1em gold, 0 0 2em red;
+  border-radius: 15px;
+  margin:5% 10% 0 10%;
+  
+}
+
+.container > section {
+  background: linear-gradient(rgb(226, 56, 56), rgb(247, 244, 84));
+  padding-bottom:4%;
+  
+  
+}
+
+/* Les titres de chaque section */
+.container h2{
+  text-align:center;
+  background-image: url("./../images/bois.jpg");
+  border-radius: 15px;
+  padding:10px;
+  margin:0;
+  color:white;
+
+}
+#download > img {
+  width: 20%;
+  display:flex;
+  flex-direction: row;
+  margin: 5% 40% 5% 40%;
+}
+
+
+.container > section > p {
+  text-align:center;
+
+ 
+}
+
+
+#rules > p > img{
+  width:20%;
+  padding: 0 5% 2%;
+  display:inline-block;
+
+}
+
+
+/* Formulaire */
+
   form {
     /*centrer le formulaire sur la page */
+    display:flex;
+    text-align:center;
+    flex-direction:column;
     margin: 0 auto;
-    width: 400px;
+    width: 60%;
     padding: 1em;
 
   }
@@ -162,11 +201,13 @@ h1{
   display:flex;
   flex-direction: column;
 }
-  #contact img{
-    width:20%;
-    float: left;
-    margin-left:10%;
-  }
+
+#contact img{
+  width:30%;
+  text-align:center;
+  margin-left:40%;
+  margin-bottom:2%;
+}
   
   form div + div {
     margin-top: 1em;
@@ -180,7 +221,7 @@ h1{
   
   input, textarea {
     font: 1em sans-serif;
-    width: 300px;
+    width: 60%;
     box-sizing: border-box;
   
     
@@ -202,7 +243,110 @@ h1{
     padding-left: 90px; 
   }
   
+  /* Design du bouton de formulaire */
   button {
     
-    margin-left: .5em;
+    display: inline-block;
+    background-color: #ec8a19;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    }
+    button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+    button:hover {
+    background-color: #fd2d11;
+    }
+    button:hover span {
+    padding-right: 25px;
+    }
+    button:hover span:after {
+    opacity: 1;
+    right: 0;
+    }
+
+
+/* Section avis */
+
+#avis{
+  display: grid;
+}
+
+#avis h2{
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#avis > p{
+  padding-top:20%;
+  padding-left:5%;
+  padding-right:3%;
+}
+
+#avis p:nth-child(1){
+  grid-column: 1;
+  grid-row:2;
+}
+
+#avis p:nth-child(2){
+  grid-column: 2;
+  grid-row:2;
+}
+
+#avis p:nth-child(3){
+  grid-column: 3;
+  grid-row:2;
+}
+
+footer{
+    background-color:black;
+    height: 5%;
+    color:white;
+    text-align:center;
+    padding:2%;
+    margin-top:5%;
+}
+
+
+/* Responsive du site */
+
+  @media(max-width: 767px)
+
+  { 
+  body{
+    width:100%;
+    margin:0;
   }
+
+  .container{
+    width:100%;
+  }
+  
+  
+  }
+  
+   
+  
+   
+  
+  
