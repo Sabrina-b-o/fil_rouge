@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "Dalek Pinpoint";
+  src: url("./../style/DalekPinpointBold.ttf") format("ttf"),
+
+ }
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-image: url("./../images/test.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+}
+
+h1{
+  font-family: 'Dalek Pinpoint' ;
+  font-size: 100px;
+  text-shadow: 2px 2px 4px black;
+  color:orange;
+  text-align:center;
+  margin-top:5%;
+  margin-bottom:0;
+}
+.nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    height: 85vh;
+  }
+
+#rules, #download, #contact, #avis {
+  border:1px solid black;
+  border-radius: 15px;
+  margin:5% 10% 0 10%;
+  
+}
+
+.container > section {
+  background: linear-gradient(rgb(226, 56, 56), rgb(247, 244, 84));
+}
+
+.container h2{
+  text-align:center;
+  background-image: url("./../images/bois.jpg");
+  border-radius: 15px;
+  padding:0;
+  margin:0;
+  color:white;
+}
+
+.container > section > p {
+  text-align:center;
+}
+
+#rules > img{
+  width:20%;
+  margin:auto;
+  display:flex;
+}
+
+
+.nav {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(300px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+  }
+  
+.nav:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+}
+
+
+.nav .text {
+      opacity: 1;
+    }
+
+.nav > div {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+
+  
+  .left, .center, .right, .lefter, .righter {
+    width: 230px;
+    height: 260px;
+    transform-style: preserve-3d;
+    opacity: 0;
+    transition: all .3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+  }
+.left, .center, .right, .lefter, .righter
+    {
+    box-shadow: 0 0 50px 20px rgba(247, 142, 22, 0.76);
+
+    }
+  
+.text  {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease;
+    bottom: 0;
+    will-change: transform;
+    text-shadow: 2px 2px 4px black;
+    color:orange;
+    text-align:center;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:100%;
+
+  }
+
+  a{
+    text-decoration:none;
+  }
+
+  .lefter {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background-image: url("./../images/des.png");
+
+  }
+  .left {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+    background-image: url("./../images/fleche.png");
+  }
+  .center {
+    opacity: 1;
+    background-image: url("./../images/accueil.png");
+  }
+  .right {
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    background-image: url("./../images/contact.png");
+  }
+  .righter {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    background-image: url("./../images/avis.png");
+  }
+
+  form {
+    /*centrer le formulaire sur la page */
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+
+  }
+
+
+#container{
+  display:flex;
+  flex-direction: column;
+}
+  #contact img{
+    width:20%;
+    float: left;
+    margin-left:10%;
+  }
+  
+  form div + div {
+    margin-top: 1em;
+  }
+  
+  label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  
+  input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+  
+    
+    border: 1px solid #999;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #000;
+  }
+  
+  textarea {
+
+    vertical-align: top;
+    height: 5em;
+  }
+  
+  .button {
+ 
+    padding-left: 90px; 
+  }
+  
+  button {
+    
+    margin-left: .5em;
+  }
