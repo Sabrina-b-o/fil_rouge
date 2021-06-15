@@ -17,7 +17,8 @@ body{
   font-weight: bold;
   font-size:15px;
   background-image: url("./../images/test.jpg");
-  background-size: cover;
+  background-attachment: fixed;
+  background-size:cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
  
@@ -50,9 +51,9 @@ h1{
     display: -ms-flexbox;
     -webkit-perspective: 120px;
     will-change: perspective;
-    -webkit-transition: all 1.3s ease-out;
-    -o-transition: all 1.3s ease-out;
-    transition: all 1.3s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -62,23 +63,24 @@ h1{
     -ms-flex-align: center;
     align-items: center;
     font-weight: 300;
-    height: 70vh;
+    height: 80vh;
     position:relative;
   }
   
 .nav:hover {
     -webkit-perspective: 700px;
     perspective: 700px;
-    -webkit-transition: all 1.3s ease-in;
-    -o-transition: all 1.3s ease-in;
-    transition: all 1.3s ease-in;
-    -webkit-transform: perspective(10000px) rotateX(0deg);
-    transform: perspective(10000px) rotateX(0deg);
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    -webkit-transform: perspective(1000px) rotateX(0deg);
+    transform: perspective(1000px) rotateX(0deg);
 }
 
 
 .nav .text {
       opacity: 1;
+      position:fixed;
     }
 
 .nav > div {
@@ -95,12 +97,12 @@ h1{
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     opacity: 0;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    -webkit-transition-delay: 1s;
-    -o-transition-delay: 1s;
-    transition-delay: 1s;
+    -webkit-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    transition: all 0s ease;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
     position: relative;
     background-position: center center;
     background-size: contain;
@@ -120,9 +122,9 @@ h1{
     -ms-transform: translateY(30px);
     transform: translateY(30px);
     opacity: 0;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    transition: all 0s ease;
     bottom: 0;
     will-change: transform;
     text-shadow: 2px 2px 4px black;
@@ -131,7 +133,7 @@ h1{
     margin-left:10%;
     margin-right:10%;
     margin-top:100%;
-    position:fixed;
+  
 
   }
 
@@ -169,7 +171,7 @@ h1{
 #rules, #download, #contact, #avis {
 
   -webkit-box-shadow: inset 0 0 1em gold, 0 0 2em red;
-  box-shadow: inset 0 0 1em gold, 0 0 2em red;
+  box-shadow: inset 0 0 10px gold, 0 0 10px red;
   border-radius: 15px;
   margin:5% 10% 0 10%;
   
@@ -225,6 +227,37 @@ h1{
 #rules img:nth-child(2){
   width:10%;
 }
+
+#intro > p{
+  padding-top:7%;
+  padding-right:20%;
+  padding-left:20%;
+  position:absolute;
+  transform:  rotate(-5deg); 
+  font-style:bold;
+  font-size:170%;
+  height: auto;
+  
+}
+
+#intro {
+  background:none;
+  position:relative;
+
+
+}
+#intro > img:nth-child(2){
+  width:80%;
+  margin-left:10%;
+   
+}
+
+#intro > img:nth-child(3), img:nth-child(4){
+  width:15%;
+  display:flex;
+  margin:auto;
+}
+
 
 
 /* Formulaire */
@@ -409,29 +442,21 @@ footer{
   }
 
   h1{
-    font-size:50px;
+    font-size:70px;
     text-align:center;
 
   }
 
-  .container{
-    width:100%;
-  }
+
   .nav {
     display:none;
   }
 
-section{
-  width:100%;
-  margin:4%;
-}
+
 #download > img {
-  width:40%;
+  width:35%;
+  margin-left:35%;
 }
-.container{
-  width:100%;
-  margin:auto;
-  padding:auto;
-}
+
   }
   
